@@ -1,0 +1,35 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: dotnet-webapi
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: dotnet-webapi
+  template:
+    metadata:
+      labels:
+        app: dotnet-webapi
+    spec:
+      containers:
+      - name: dotnet-webapi
+        image: forlink/monitoring-tests:latest # Updated image reference
+        ports:
+        - containerPort: 8080
+        env:
+        - name: OTEL_EXPORTER_OTLP_ENDPOINT
+          value: "http://otel-collector:4317"
+---
+apiVersion: v1
+kind: Service
+metadata:
+  name: dotnet-webapi
+spec:
+  type: NodePort # Or LoadBalancer, depending on your setup
+  ports:
+  - port: 8080
+    targetPort: 8080 # Forward traffic to container's port 8080
+    nodePort: 30001 # Optional: Specify a fixed NodePort for access
+  selector:
+    app: dotnet-webapi

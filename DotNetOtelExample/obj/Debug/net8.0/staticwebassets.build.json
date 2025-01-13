@@ -1,0 +1,11 @@
+{
+  "Version": 1,
+  "Hash": "x3xrdtz+JO4jgVfmxg56hMa0X9U9KcWqKfr23omVcRw=",
+  "Source": "DotNetOtelExample",
+  "BasePath": "_content/DotNetOtelExample",
+  "Mode": "Default",
+  "ManifestType": "Build",
+  "ReferencedProjectsConfiguration": [],
+  "DiscoveryPatterns": [],
+  "Assets": []
+}
