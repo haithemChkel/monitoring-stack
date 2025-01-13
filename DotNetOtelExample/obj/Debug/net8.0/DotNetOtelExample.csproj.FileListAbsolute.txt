@@ -100,3 +100,4 @@ C:\DEV\REPOS\monitoring-stack\DotNetOtelExample\obj\Debug\net8.0\refint\DotNetOt
 C:\DEV\REPOS\monitoring-stack\DotNetOtelExample\obj\Debug\net8.0\DotNetOtelExample.pdb
 C:\DEV\REPOS\monitoring-stack\DotNetOtelExample\obj\Debug\net8.0\DotNetOtelExample.genruntimeconfig.cache
 C:\DEV\REPOS\monitoring-stack\DotNetOtelExample\obj\Debug\net8.0\ref\DotNetOtelExample.dll
+C:\DEV\REPOS\monitoring-stack\DotNetOtelExample\obj\Debug\net8.0\DotNetOtelExample.sourcelink.json

@@ -13,7 +13,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("DotNetOtelExample")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+1f7d9ceeea337032352af421593fa66c51a5edf1")]
 [assembly: System.Reflection.AssemblyProductAttribute("DotNetOtelExample")]
 [assembly: System.Reflection.AssemblyTitleAttribute("DotNetOtelExample")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

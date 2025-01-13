@@ -1,0 +1,20 @@
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: grafana-datasources
+  labels:
+    grafana_datasource: "1"
+data:
+  datasources.yaml: |
+    apiVersion: 1
+    datasources:
+      - name: Loki
+        type: loki
+        url: http://loki.default.svc.cluster.local:3100
+        access: proxy
+        isDefault: false
+      - name: Tempo
+        type: tempo
+        url: http://tempo.default.svc.cluster.local:3100
+        access: proxy
+        isDefault: false
