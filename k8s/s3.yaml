@@ -1,0 +1,10 @@
+storage:
+  trace:
+    backend: s3
+    s3:
+      bucket: your-s3-bucket-name           # Replace with your S3 bucket name
+      endpoint: s3.amazonaws.com            # Replace with your S3 endpoint (AWS default)
+      access_key: ${AWS_ACCESS_KEY_ID}      # Reference to the environment variable
+      secret_key: ${AWS_SECRET_ACCESS_KEY}  # Reference to the environment variable
+      region: your-region                   # Replace with the AWS region of your bucket
+      insecure: false                       # Set to true if using a custom endpoint without HTTPS
