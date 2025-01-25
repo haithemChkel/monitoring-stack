@@ -1,0 +1,70 @@
+level=warn ts=2025-01-25T11:53:21.294011422Z caller=main.go:133 msg="-- CONFIGURATION WARNINGS --"
+level=warn ts=2025-01-25T11:53:21.29416831Z caller=main.go:139 msg="Inline, unscoped overrides are deprecated. Please use the new overrides config format."
+level=info ts=2025-01-25T11:53:21.294313789Z caller=main.go:121 msg="Starting Tempo" version="(version=v2.7.0, branch=HEAD, revision=b0da6b481)"
+level=info ts=2025-01-25T11:53:22.702184318Z caller=cache.go:55 msg="caches available to storage backend" parquet-footer=false bloom=false parquet-offset-idx=false parquet-column-idx=false trace-id-index=false parquet-page=false
+level=info ts=2025-01-25T11:53:22.707610614Z caller=server.go:248 msg="server listening on addresses" http=[::]:3100 grpc=[::]:4317
+level=info ts=2025-01-25T11:53:24.13227861Z caller=cache.go:55 msg="caches available to storage backend" parquet-footer=false bloom=false parquet-offset-idx=false parquet-column-idx=false trace-id-index=false parquet-page=false
+level=info ts=2025-01-25T11:53:24.134356144Z caller=frontend.go:63 msg="creating middleware in query frontend"
+level=info ts=2025-01-25T11:53:24.134467687Z caller=sync_handler_cache.go:117 msg="init frontend cache" role=frontend-search enabled=false
+level=info ts=2025-01-25T11:53:24.13451824Z caller=sync_handler_cache.go:117 msg="init frontend cache" role=frontend-search enabled=false
+level=info ts=2025-01-25T11:53:24.134529247Z caller=sync_handler_cache.go:117 msg="init frontend cache" role=frontend-search enabled=false
+level=info ts=2025-01-25T11:53:24.134539911Z caller=sync_handler_cache.go:117 msg="init frontend cache" role=frontend-search enabled=false
+level=info ts=2025-01-25T11:53:24.134549397Z caller=sync_handler_cache.go:117 msg="init frontend cache" role=frontend-search enabled=false
+level=warn ts=2025-01-25T11:53:24.135617566Z caller=modules.go:277 msg="metrics-generator is not configured." err="no metrics_generator.storage.path configured, metrics generator will be disabled"
+level=warn ts=2025-01-25T11:53:24.135760764Z caller=modules.go:305 msg="Worker address is empty in single binary mode. Attempting automatic worker configuration. If queries are unresponsive consider configuring the worker explicitly." address=127.0.0.1:4317
+level=info ts=2025-01-25T11:53:24.136105682Z caller=worker.go:107 msg="Starting querier worker connected to query-frontend" frontend=127.0.0.1:4317
+ts=2025-01-25T11:53:24Z level=info msg="OTel Shim Logger Initialized" component=tempo
+level=info ts=2025-01-25T11:53:24.138107788Z caller=module_service.go:82 msg=starting module=cache-provider
+level=info ts=2025-01-25T11:53:24.138215593Z caller=module_service.go:82 msg=starting module=internal-server
+level=info ts=2025-01-25T11:53:24.142928207Z caller=module_service.go:82 msg=starting module=optional-store
+level=info ts=2025-01-25T11:53:24.143121248Z caller=module_service.go:82 msg=starting module=store
+level=info ts=2025-01-25T11:53:24.143232589Z caller=module_service.go:82 msg=starting module=server
+level=info ts=2025-01-25T11:53:24.143692729Z caller=module_service.go:82 msg=starting module=memberlist-kv
+level=info ts=2025-01-25T11:53:24.143730969Z caller=module_service.go:82 msg=starting module=overrides
+level=info ts=2025-01-25T11:53:24.144004909Z caller=module_service.go:82 msg=starting module=compactor
+level=info ts=2025-01-25T11:53:24.144065359Z caller=tempodb.go:571 msg="polling enabled" interval=5m0s blocklist_concurrency=50
+level=info ts=2025-01-25T11:53:24.144789853Z caller=module_service.go:82 msg=starting module=secondary-ring
+level=info ts=2025-01-25T11:53:24.144934135Z caller=module_service.go:82 msg=starting module=ingester
+level=info ts=2025-01-25T11:53:24.14508847Z caller=ingester.go:368 msg="beginning wal replay"
+level=warn ts=2025-01-25T11:53:24.145237073Z caller=wal.go:94 msg="unowned file entry ignored during wal replay" file=blocks err=null
+level=info ts=2025-01-25T11:53:24.145254426Z caller=ingester.go:406 msg="wal replay complete"
+level=info ts=2025-01-25T11:53:24.145289595Z caller=ingester.go:420 msg="reloading local blocks" tenants=0
+level=info ts=2025-01-25T11:53:24.145356896Z caller=lifecycler.go:675 msg="not loading tokens from file, tokens file path is empty"
+level=info ts=2025-01-25T11:53:24.145431966Z caller=lifecycler.go:702 msg="instance not found in ring, adding with no tokens" ring=ingester
+level=info ts=2025-01-25T11:53:24.145525808Z caller=module_service.go:82 msg=starting module=metrics-generator-ring
+level=info ts=2025-01-25T11:53:24.145703733Z caller=module_service.go:82 msg=starting module=metrics-generator
+level=info ts=2025-01-25T11:53:24.145975533Z caller=module_service.go:82 msg=starting module=overrides-api
+level=info ts=2025-01-25T11:53:24.146091584Z caller=module_service.go:82 msg=starting module=query-frontend
+level=info ts=2025-01-25T11:53:24.146179766Z caller=ring.go:316 msg="ring doesn't exist in KV store yet"
+level=info ts=2025-01-25T11:53:24.146372812Z caller=module_service.go:82 msg=starting module=ring
+level=info ts=2025-01-25T11:53:24.145606529Z caller=lifecycler.go:544 msg="auto-joining cluster after timeout" ring=ingester
+level=info ts=2025-01-25T11:53:24.146693438Z caller=module_service.go:82 msg=starting module=querier
+level=info ts=2025-01-25T11:53:24.14693231Z caller=worker.go:183 msg="adding connection" addr=127.0.0.1:4317
+level=info ts=2025-01-25T11:53:24.147359482Z caller=module_service.go:82 msg=starting module=distributor
+ts=2025-01-25T11:53:24Z level=info msg="Starting GRPC server" component=tempo endpoint=localhost:4317
+level=info ts=2025-01-25T11:53:24.148216105Z caller=worker.go:249 msg="total worker concurrency updated" totalConcurrency=20
+level=error ts=2025-01-25T11:53:24.14975872Z caller=app.go:223 msg="module failed" module=distributor err="starting module distributor: invalid service state: Failed, expected: Running, failure: failed to start subservices: not healthy, 0 terminated, 1 failed: [error starting receiver: listen tcp 127.0.0.1:4317: bind: address already in use]"
+level=info ts=2025-01-25T11:53:24.149966634Z caller=lifecycler.go:594 msg="lifecycler loop() exited gracefully" ring=ingester
+level=info ts=2025-01-25T11:53:24.150085069Z caller=lifecycler.go:977 msg="changing instance state from" old_state=ACTIVE new_state=LEAVING ring=ingester
+level=info ts=2025-01-25T11:53:24.150337788Z caller=lifecycler.go:1056 msg="transfers are disabled"
+level=info ts=2025-01-25T11:53:24.150616115Z caller=lifecycler.go:1073 msg="lifecycler entering final sleep before shutdown" final_sleep=0s
+level=info ts=2025-01-25T11:53:24.150648875Z caller=module_service.go:120 msg="module stopped" module=query-frontend
+level=info ts=2025-01-25T11:53:24.150123396Z caller=module_service.go:120 msg="module stopped" module=metrics-generator
+level=info ts=2025-01-25T11:53:24.15081502Z caller=module_service.go:120 msg="module stopped" module=overrides-api
+level=info ts=2025-01-25T11:53:24.151040949Z caller=lifecycler.go:646 msg="instance removed from the KV store" ring=ingester
+level=info ts=2025-01-25T11:53:24.151480216Z caller=frontend.go:333 msg="received shutdown notification from querier" querier=tempo-69d55b4bd-kf7rw
+level=info ts=2025-01-25T11:53:24.151480937Z caller=module_service.go:120 msg="module stopped" module=ingester
+level=info ts=2025-01-25T11:53:24.152202105Z caller=module_service.go:120 msg="module stopped" module=querier
+level=info ts=2025-01-25T11:53:24.152444708Z caller=module_service.go:120 msg="module stopped" module=optional-store
+level=info ts=2025-01-25T11:53:24.15258592Z caller=module_service.go:120 msg="module stopped" module=secondary-ring
+level=info ts=2025-01-25T11:53:25.531407268Z caller=poller.go:145 msg="blocklist poll complete" seconds=1.387296876
+level=info ts=2025-01-25T11:53:25.531606735Z caller=module_service.go:120 msg="module stopped" module=overrides
+level=info ts=2025-01-25T11:53:25.531803239Z caller=module_service.go:120 msg="module stopped" module=store
+level=info ts=2025-01-25T11:53:25.5322865Z caller=module_service.go:120 msg="module stopped" module=cache-provider
+level=info ts=2025-01-25T11:53:25.713751691Z caller=module_service.go:120 msg="module stopped" module=metrics-generator-ring
+level=info ts=2025-01-25T11:53:25.713914334Z caller=module_service.go:120 msg="module stopped" module=ring
+level=info ts=2025-01-25T11:53:25.714186942Z caller=module_service.go:120 msg="module stopped" module=memberlist-kv
+level=info ts=2025-01-25T11:53:25.714553291Z caller=server_service.go:164 msg="server stopped"
+level=info ts=2025-01-25T11:53:25.714600575Z caller=module_service.go:120 msg="module stopped" module=server
+level=info ts=2025-01-25T11:53:25.714690696Z caller=module_service.go:120 msg="module stopped" module=internal-server
+level=info ts=2025-01-25T11:53:25.714725763Z caller=app.go:209 msg="Tempo stopped"
