@@ -19,26 +19,25 @@ spec:
 
 -------------------------------------
 apiVersion: networking.k8s.io/v1
-kind: Ingress
+kind: NetworkPolicy
 metadata:
-  name: tempo-ingress
+  name: allow-tempo-egress
   namespace: default
-  annotations:
-    nginx.ingress.kubernetes.io/rewrite-target: /
-    nginx.ingress.kubernetes.io/ssl-redirect: "false"
 spec:
-  rules:
-    - host: tempo.example.com
-      http:
-        paths:
-          - path: /
-            pathType: Prefix
-            backend:
-              service:
-                name: tempo
-                port:
-                  number: 3100
-
+  podSelector:
+    matchLabels:
+      app: tempo
+  policyTypes:
+    - Egress
+  egress:
+    - to:
+        - ipBlock:
+            cidr: 0.0.0.0/0   # Allow all outgoing traffic. Replace with Grafana's external IP for stricter policies.
+      ports:
+        - protocol: TCP
+          port: 443           # Use 443 if Grafana is exposed over HTTPS.
+        - protocol: TCP
+          port: 80            # Use 80 if Grafana is exposed over HTTP.
 
 ------------------------------------
 
